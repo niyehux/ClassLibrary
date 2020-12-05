@@ -56,6 +56,13 @@ namespace RedisOpLibrary
         /// <returns></returns>
         long String_GetLength(string key);
 
+        /// <summary>
+        /// 字符串判断指定key是否存在
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        bool String_ExsisKey(string key);
+
         #endregion
     }
 }

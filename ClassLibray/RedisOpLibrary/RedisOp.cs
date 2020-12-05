@@ -60,5 +60,14 @@ namespace RedisOpLibrary
             }
             return false;
         }
+
+        public bool String_ExsisKey(string key)
+        {
+            if (Database.StringGet(key).IsNull)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

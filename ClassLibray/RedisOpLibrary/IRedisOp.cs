@@ -64,5 +64,62 @@ namespace RedisOpLibrary
         bool String_ExsisKey(string key);
 
         #endregion
+
+        #region 列表
+
+        /// <summary>
+        /// 列表中向指定的key，从右边推入指定的值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        bool List_RPush<T>(string key,T value);
+
+        /// <summary>
+        /// 列表中指定key中，在指定值的前面或者后面插入值
+        /// 如果指定key不存在，返回-1，列表中指定的值不存在返回0
+        /// 命令执行成功，返回当前列表的元素个数
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="listInsertEnum"></param>
+        /// <param name="proValue"></param>
+        /// <param name="insertValue"></param>
+        /// <returns></returns>
+        bool List_Insert<T>(string key, ListInsertEnum listInsertEnum, T proValue, T insertValue);
+
+        /// <summary>
+        /// 列表中指定key从右边插入一个或者多个值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        bool List_RPush<T>(string key, params T[] values);
+
+        /// <summary>
+        /// 列表中获取指定key的第一个元素
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        string List_LPop(string key);
+
+        /// <summary>
+        /// 列表中获取指定key的最后一个元素
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        string List_RPop(string key);
+
+
+
+        #endregion
+    }
+
+    public enum ListInsertEnum
+    {
+        before,
+        after
     }
 }

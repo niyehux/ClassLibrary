@@ -1,10 +1,8 @@
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\bin\Debug\netstandard2.0\RedisOpLibrary.deps.json
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\bin\Debug\netstandard2.0\RedisOpLibrary.dll
-D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.csprojAssemblyReference.cache
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.AssemblyInfoInputs.cache
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.AssemblyInfo.cs
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\bin\Debug\netstandard2.0\RedisOpLibrary.pdb
-D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.csproj.CoreCompileInputs.cache
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.dll
 D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.pdb
 D:\codes\ClassLibrary\ClassLibray\RedisOpLibrary\bin\Debug\netstandard2.0\RedisOpLibrary.deps.json
@@ -16,3 +14,4 @@ D:\codes\ClassLibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisO
 D:\codes\ClassLibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.csproj.CoreCompileInputs.cache
 D:\codes\ClassLibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.dll
 D:\codes\ClassLibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.pdb
+D:\codes\study\classlibrary\ClassLibray\RedisOpLibrary\obj\Debug\netstandard2.0\RedisOpLibrary.csproj.CoreCompileInputs.cache

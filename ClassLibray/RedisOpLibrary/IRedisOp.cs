@@ -74,7 +74,7 @@ namespace RedisOpLibrary
         /// <param name="key"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        bool List_RPush<T>(string key,T value);
+        bool List_RPush<T>(string key, T value);
 
         /// <summary>
         /// 列表中指定key中，在指定值的前面或者后面插入值
@@ -99,20 +99,44 @@ namespace RedisOpLibrary
         bool List_RPush<T>(string key, params T[] values);
 
         /// <summary>
-        /// 列表中获取指定key的第一个元素
+        /// 列表中移除指定key的第一个元素
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
         string List_LPop(string key);
 
         /// <summary>
-        /// 列表中获取指定key的最后一个元素
+        /// 列表中移除指定key的最后一个元素
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
         string List_RPop(string key);
 
+        /// <summary>
+        /// 列表中获取索引范围内的内容列表
+        /// 索引默认从0开始，-1代表最后一个元素，-2代表倒数第二个元素
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        List<string> List_Range(string key, long start, long end);
 
+        /// <summary>
+        /// 列表中获取指定key中对应索引的值
+        /// -1代表最后一个值，如果索引不存在则返回null
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        string List_GetByIndex(string key, int index);
+
+        /// <summary>
+        /// 列表获取指定key中列表的长度
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        int List_GetLength(string key);
 
         #endregion
     }

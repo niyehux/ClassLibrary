@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StackExchange.Redis;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -137,6 +138,74 @@ namespace RedisOpLibrary
         /// <param name="key"></param>
         /// <returns></returns>
         int List_GetLength(string key);
+
+        #endregion
+
+        #region 哈希表
+
+        /// <summary>
+        /// 将哈希表中的指定的key的字段filed的值设置为value
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="field"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        bool Hash_SetKeyField<T>(string key, string field, T value);
+
+        /// <summary>
+        /// 删除指定key的哈希表中指定字段
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="filed"></param>
+        /// <returns></returns>
+        bool Hash_DeleteKeyField(string key, string filed);
+
+        /// <summary>
+        /// 获取指定key哈希表中对应字段的值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="field"></param>
+        /// <returns></returns>
+        string Hash_GetKeyField(string key, string field);
+
+        /// <summary>
+        /// 获取指定key的哈希表中所有值列表
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        List<string> Hash_GetAllValues(string key);
+
+        /// <summary>
+        /// 获取指定key的哈希表中所有的字段列表
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        List<string> Hash_GetAllKeys(string key);
+
+        /// <summary>
+        /// 获取指定key的哈希表中所有的字段以及值的元组
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        HashEntry[] Hash_GetFieldValues(string key);
+
+        /// <summary>
+        /// 判断指定key的哈希表中的指定的字段是否存在
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="field"></param>
+        /// <returns></returns>
+        bool Hash_ExsistField(string key, string field);
+
+        /// <summary>
+        /// 获取指定key的哈希表中字段的长度
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        int Hash_Length(string key);
+
+
 
         #endregion
     }

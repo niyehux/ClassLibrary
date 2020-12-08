@@ -158,5 +158,61 @@ namespace RedisOpLibrary
         {
             return (int)Database.ListLength(key);
         }
+
+        public bool Hash_SetKeyField<T>(string key, string field, T value)
+        {
+            return Database.HashSet(key, field, value.ToString());
+        }
+
+        public bool Hash_DeleteKeyField(string key, string filed)
+        {
+            return Database.HashDelete(key, filed);
+        }
+
+        public string Hash_GetKeyField(string key, string field)
+        {
+            if (Database.HashExists(key, field))
+            {
+                return Database.HashGet(key, field);
+            }
+            return "";
+        }
+
+        public List<string> Hash_GetAllValues(string key)
+        {
+            var values = new List<string>();
+            var options = Database.HashGetAll(key);
+            foreach (var op in options)
+            {
+                values.Add(op.Value);
+            }
+            return values;
+        }
+
+        public List<string> Hash_GetAllKeys(string key)
+        {
+            var values = new List<string>();
+            var options = Database.HashGetAll(key);
+            foreach (var op in options)
+            {
+                values.Add(op.Name);
+            }
+            return values;
+        }
+
+        public HashEntry[] Hash_GetFieldValues(string key)
+        {
+            return Database.HashGetAll(key);
+        }
+
+        public bool Hash_ExsistField(string key, string field)
+        {
+            return Database.HashExists(key, field);
+        }
+
+        public int Hash_Length(string key)
+        {
+            return (int)Database.HashLength(key);
+        }
     }
 }
